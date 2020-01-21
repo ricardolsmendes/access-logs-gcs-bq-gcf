@@ -1,0 +1,39 @@
+{
+  "name": "access-logs-gcs-bq-gcf",
+  "version": "0.1.0",
+  "description": "Cloud Function to load data from a GCS file into a BigQuery Table",
+  "license": "MIT",
+  "homepage": "https://github.com/ricardolsmendes/access-logs-gcs-bq-gcf#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardolsmendes/access-logs-gcs-bq-gcf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ricardolsmendes/access-logs-gcs-bq-gcf/issues"
+  },
+  "author": "Ricardo Mendes <ricardolsmendes@gmail.com>",
+  "main": "./index.js",
+  "scripts": {
+    "coverage": "nyc npm test",
+    "fix": "eslint --fix ./*.js",
+    "lint": "eslint ./*.js",
+    "test": "mocha --reporter mocha-multi-reporters --reporter-options configFile=./mocha-multi-reporters.json"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^4.2.0",
+    "access-logs-dw-gcp-js": "github:ricardolsmendes/access-logs-dw-gcp-js"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "mocha": "^7.0.0",
+    "mocha-junit-reporter": "^1.23.3",
+    "mocha-multi-reporters": "^1.1.7",
+    "nyc": "^15.0.0",
+    "sinon": "^8.1.0"
+  }
+}
