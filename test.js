@@ -17,13 +17,14 @@ describe('loadJsonLinesIntoBigQuery', () => {
   });
 
   it('returns a promise', () => {
-    const response = loadJsonLinesIntoBigQuery({
+    const loadJsonLinesIntoBigQueryReturn = loadJsonLinesIntoBigQuery({
       metageneration: '2',
       bucket: 'testBucket',
       name: 'test.jsonl'
     });
 
-    assert.strictEqual(Object.prototype.toString.call(response), '[object Promise]');
+    assert.strictEqual(Object.prototype.toString.call(loadJsonLinesIntoBigQueryReturn),
+      '[object Promise]');
   });
 
   it('ignores a file that was not created, e.g. updated or deleted', () => {
