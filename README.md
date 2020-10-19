@@ -11,10 +11,10 @@ _This repository is part a project described in the article
 
 Below environment variables are required by the function:
 
-| NAME | DESCRIPTION |
-| ---- | ----------- |
-| TARGET_DATASET | BigQuery Dataset to store the output. |
-| TARGET_TABLE | BigQuery Table to store the output. |
+| NAME             | DESCRIPTION                           |
+| ---------------- | ------------------------------------- |
+| `TARGET_DATASET` | BigQuery Dataset to store the output. |
+| `TARGET_TABLE`   | BigQuery Table to store the output.   |
 
 ## Using Cloud Build to deploy
 
@@ -22,15 +22,15 @@ Present function is deployable through Cloud Build (build spec file: `.cloudbuil
 
 Below substitution variables are required by the build job:
 
-| NAME | DESCRIPTION |
-| ---- | ----------- |
-| _FUNCTION_NAME | ID or fully qualified identifier for the function. |
-| _MAX_INSTANCES | Maximum number of instances for the function. |
-| _SERVICE_ACCOUNT | The email address of the IAM service account associated with the function at runtime. |
-| _SOURCE | Location of source code to deploy. |
-| _TARGET_DATASET | BigQuery Dataset to store the output. |
-| _TARGET_TABLE | BigQuery Table to store the output. |
-| _TRIGGER_BUCKET | GCS Bucket that will trigger the Cloud Function on file-related events. |
+| NAME               | DESCRIPTION                                                                           |
+| ------------------ | ------------------------------------------------------------------------------------- |
+| `_FUNCTION_NAME`   | ID or fully qualified identifier for the function.                                    |
+| `_MAX_INSTANCES`   | Maximum number of instances for the function.                                         |
+| `_SERVICE_ACCOUNT` | The email address of the IAM service account associated with the function at runtime. |
+| `_SOURCE`          | Location of source code to deploy.                                                    |
+| `_TARGET_DATASET`  | BigQuery Dataset to store the output.                                                 |
+| `_TARGET_TABLE`    | BigQuery Table to store the output.                                                   |
+| `_TRIGGER_BUCKET`  | GCS Bucket that will trigger the Cloud Function on file-related events.               |
 
 You may refer to [gcloud functions deploy docs][6] for instructions on how to fulfill some of the
 variables.
