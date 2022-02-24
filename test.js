@@ -9,7 +9,7 @@ const { loadJsonLinesIntoBigQuery } = require('./index');
 
 describe('loadJsonLinesIntoBigQuery', () => {
 
-  var jsonLinesStub;
+  let jsonLinesStub;
 
   beforeEach(() => {
     jsonLinesStub = sinon.stub(GCSToBigQueryLoader.prototype, 'jsonLines').returns(
